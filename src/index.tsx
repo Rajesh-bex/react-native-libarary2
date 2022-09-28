@@ -6,10 +6,10 @@ import { EditScreen } from './Screen/editScreen';
 const SecondCustomAPP = () => {
   const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator>
+    <>
       <Stack.Screen name="secondHome" component={HomeScreen} />
       <Stack.Screen name="secondEdit" component={EditScreen} />
-    </Stack.Navigator>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './Screen/homeScreen';
 import { EditScreen } from './Screen/editScreen';
 
-const secondCustomAPP = () => {
+const SecondCustomAPP = () => {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator>
@@ -13,4 +13,4 @@ const secondCustomAPP = () => {
   );
 };
 
-export default secondCustomAPP;
+export default SecondCustomAPP;

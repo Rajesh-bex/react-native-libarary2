@@ -6,7 +6,7 @@ export const HomeScreen = ({ navigation }: any) => {
   const dispatch = useDispatch();
   const { AwsfirstScreen } = useSelector((state: any) => state.TestReducer);
   const onClick = () => {
-    dispatch({ type: 'LIB_FIRST_SCREEN' });
+    dispatch({ type: 'AWS_FIRST_SCREEN' });
     navigation.navigate('secondEdit');
   };
 

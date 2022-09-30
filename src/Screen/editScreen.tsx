@@ -7,15 +7,21 @@ import {
   Dimensions,
   Button,
 } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 const { width } = Dimensions.get('screen');
 
 export const EditScreen = ({ navigation }: any) => {
+  const dispatch = useDispatch();
+  const onClick = () => {
+    dispatch({ type: 'LIB_SECOND_SCREEN' });
+    navigation.navigate('Home');
+  };
   return (
     <View>
       <Text>this is edit screen</Text>
       <TextInput style={styleSheet.inputContainer} />
-      <Button title={'Go pro'} onPress={() => navigation.navigate('Home')} />
+      <Button title={'Go pro'} onPress={() => onClick()} />
     </View>
   );
 };

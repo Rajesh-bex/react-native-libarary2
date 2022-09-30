@@ -7,19 +7,20 @@ import {
   Dimensions,
   Button,
 } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const { width } = Dimensions.get('screen');
 
-export const EditScreen = ({ navigation }: any) => {
+export const EditScreen = ({ navigation, value }: any) => {
   const dispatch = useDispatch();
-  const { secondScreen } = useSelector((state: any) => state.CommonTestReducer);
+  const { firstScreen, secondScreen }: any = React.useContext(value);
+
   const onClick = () => {
     dispatch({ type: 'LIB_SECOND_SCREEN' });
     dispatch({ type: 'SECOND_SCREEN' });
     navigation.navigate('Home');
   };
-  console.log(secondScreen, 'firstScreen');
+  console.log(secondScreen, firstScreen, 'firstScreen');
   return (
     <View>
       <Text>this is edit screen</Text>

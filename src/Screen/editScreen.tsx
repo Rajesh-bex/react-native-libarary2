@@ -13,7 +13,7 @@ const { width } = Dimensions.get('screen');
 
 export const EditScreen = ({ navigation }: any) => {
   const dispatch = useDispatch();
-  const { secondScreen } = useSelector((state: any) => state.TestReducers);
+  const { secondScreen } = useSelector((state: any) => state.CommonTestReducer);
   const onClick = () => {
     dispatch({ type: 'LIB_SECOND_SCREEN' });
     dispatch({ type: 'SECOND_SCREEN' });

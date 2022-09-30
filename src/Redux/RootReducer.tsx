@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { LibTestReducer } from './TestReducer';
+import { TestReducer } from './TestReducer';
 
 export const rootReducer = combineReducers({
-  LibTestReducer,
+  TestReducer,
 });

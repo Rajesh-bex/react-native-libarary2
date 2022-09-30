@@ -1,21 +1,21 @@
 const initialState = {
-  firstScreen: false,
-  secondScreen: false,
+  LibfirstScreen: false,
+  LibsecondScreen: false,
 };
 
-export const LibTestReducer = (state = initialState, action: any) => {
+export const TestReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case 'LIB_FIRST_SCREEN': {
       return {
         ...state,
-        firstScreen: true,
+        LibfirstScreen: true,
       };
     }
 
     case 'LIB_SECOND_SCREEN': {
       return {
         ...state,
-        secondScreen: true,
+        LibsecondScreen: true,
       };
     }
     default:

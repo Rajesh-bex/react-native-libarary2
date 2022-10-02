@@ -11,17 +11,17 @@ import { useDispatch } from 'react-redux';
 
 const { width } = Dimensions.get('screen');
 
-export const EditScreen = ({ navigation, value }: any) => {
+export const EditScreen = ({ navigation, value, route, context }: any) => {
   const dispatch = useDispatch();
-  //const { firstScreen, secondScreen }: any = React.useContext(value);
+  // const { firstScreen, secondScreen }: any = React.useContext(value);
 
   const onClick = () => {
     dispatch({ type: 'LIB_SECOND_SCREEN' });
     dispatch({ type: 'SECOND_SCREEN' });
     navigation.navigate('Home');
   };
-  //console.log(secondScreen, firstScreen, 'firstScreen');
-  console.log(value);
+  // console.log(secondScreen, firstScreen, 'firstScreen');
+  console.log(value, route, context);
   return (
     <View>
       <Text>this is edit screen</Text>

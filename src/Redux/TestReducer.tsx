@@ -1,6 +1,7 @@
 const initialState = {
   LibfirstScreen: false,
   LibsecondScreen: false,
+  commonData: false,
 };
 
 export const TestReducer = (state = initialState, action: any) => {
@@ -18,6 +19,14 @@ export const TestReducer = (state = initialState, action: any) => {
         LibsecondScreen: true,
       };
     }
+
+    case 'COMMON_REDUCER': {
+      return {
+        ...state,
+        commonData: true,
+      };
+    }
+
     default:
       return {
         ...state,

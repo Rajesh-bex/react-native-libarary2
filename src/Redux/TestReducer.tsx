@@ -20,6 +20,13 @@ export const TestReducer = (state = initialState, action: any) => {
       };
     }
 
+    case 'COMMON_REDUCER': {
+      return {
+        ...state,
+        commonData: true,
+      };
+    }
+
     default:
       return {
         ...state,

@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const HomeScreen = ({ navigation }: any) => {
   const dispatch = useDispatch();
-  const { LibfirstScreen } = useSelector((state: any) => state.TestReducer);
-  const { commonData } = useSelector((state: any) => state.CommonTestReducer);
+  const { LibfirstScreen, commonData } = useSelector(
+    (state: any) => state.TestReducer
+  );
 
   const onClick = () => {
     dispatch({ type: 'LIB_FIRST_SCREEN' });

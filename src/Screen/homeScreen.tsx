@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const HomeScreen = ({ navigation }: any) => {
   const dispatch = useDispatch();
-  const { AwsfirstScreen, LibfirstScreen } = useSelector(
+  const { commonData, LibfirstScreen } = useSelector(
     (state: any) => state.TestReducer
   );
   const onClick = () => {
@@ -12,7 +12,7 @@ export const HomeScreen = ({ navigation }: any) => {
     navigation.navigate('secondEdit');
   };
 
-  console.log(AwsfirstScreen, LibfirstScreen);
+  console.log(commonData, LibfirstScreen, 'secondScreen');
 
   return (
     <View>
